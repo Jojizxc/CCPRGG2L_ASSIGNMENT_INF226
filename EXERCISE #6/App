@@ -1,0 +1,61 @@
+public class App {
+    public static void main(String[] args) throws Exception {
+
+        System.out.println("ALING BECKY'S GROCERY STORE");
+        
+        System.out.println("*********** ITEMS TO PURCHASE **********");
+        
+       GroceryItem item1 = new Soap();
+        item1.name = "Safeguard";
+        item1.showItemName();
+
+        GroceryItem item2 = new Softdrinks( );
+        item2.name = "Sprite";
+        item2.showItemName(); 
+
+        System.out.println("********** ITEMS PRICE **********");
+       
+        Cashier c1 = new Cashier();
+        item1.price = 50;
+        item2.price = 20; 
+       c1.showItemPrice(item1);
+       c1.showItemPrice(item2); 
+        
+       
+       System.out.println("*********CHECKOUT*********");
+       
+       c1.checkOut(item1);
+       c1.checkOut(item2);  
+        
+       System.out.println("*************RECEIPT*********");
+       
+
+        GroceryItem[] itemArray = new GroceryItem[2];
+
+        itemArray[0] = item1;
+        itemArray[1] = item2;  
+
+   
+
+      double totalPrice = 0.00;
+    
+        for (int i = 0; i < itemArray.length; i++) {
+           itemArray[i].showItemName();
+           System.out.println(itemArray[i].price); 
+
+           totalPrice += itemArray[i].price;
+           
+        
+        }
+        System.out.println("*****TOTAL********");
+        System.out.println("The total is:" + totalPrice);
+
+       
+
+      
+
+       
+
+
+    }
+}
