@@ -1,0 +1,15 @@
+public class App {
+    public static void main(String[] args) throws Exception {
+      
+        Person me = new Person();
+        me.setName("Bianca");
+
+        System.out.println(me.getName()); 
+
+
+        Daughter Me = new Daughter();
+        System.out.println(Me.surname); 
+
+        Me.showSurname();
+    }
+}
